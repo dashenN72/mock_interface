@@ -1,0 +1,8 @@
+[2020-03-06 00:31:15,382] mock_server.py->get_response_by_request line:22 [INFO]request params：task/index
+[2020-03-06 00:31:15,383] mock_server.py->get_response_by_request line:30 [INFO]preprocess params：
+[2020-03-06 00:31:15,384] db.py->select_one line:58 [INFO]db condition: SELECT param_response FROM relation WHERE url_interface="task/index" AND param_request="" AND status=1
+[2020-03-06 00:31:15,386] mock_server.py->get_response_by_request line:33 [INFO]db result：{'code': '0000', 'data': [], 'message': '执行单条查询操作成功'}
+[2020-03-06 00:31:29,579] mock_server.py->get_response_by_request line:22 [INFO]request params：op/type/index
+[2020-03-06 00:31:29,579] mock_server.py->get_response_by_request line:30 [INFO]preprocess params：op=windows
+[2020-03-06 00:31:29,582] db.py->select_one line:58 [INFO]db condition: SELECT param_response FROM relation WHERE url_interface="op/type/index" AND param_request="op=windows" AND status=1
+[2020-03-06 00:31:29,583] mock_server.py->get_response_by_request line:33 [INFO]db result：{'code': '0000', 'data': {'param_response': "{'code': 0, 'message': 'success','data':[{'a':1},{'b':2}]}"}, 'message': '执行单条查询操作成功'}
