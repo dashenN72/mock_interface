@@ -32,7 +32,7 @@
 			"status": 1,
 			"request_response": [
 				{
-					"value_request": {"name":"test1"},
+					"value_request": {"name":"test2"},
 					"value_response": {"code":1000, "data": "pretest2", "message":"接口返回成功"},
 					"header_interface": "",
 					"status": 1
