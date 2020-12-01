@@ -1,0 +1,79 @@
+{
+	"name": "支付中心接口",
+	"data": [
+		{
+			"name_interface": "/add/getStatus",
+			"header_interface": "application:json",
+			"status": 1,
+			"request_response": [
+				{
+					"value_request": {"name":"1"},
+					"value_response": {"code":1000, "data": "2", "message":"接口返回成功"},
+					"header_interface": "",
+					"status": 1
+				},
+				{
+					"value_request": {"name":"1-1"},
+					"value_response": {"name":"2-2"},
+					"header_interface": "",
+					"status": 1
+				},
+				{
+					"value_request": {"name":"1-2"},
+					"value_response": {"name":"2-3"},
+					"header_interface": "",
+					"status": 1
+				}
+			]
+		},
+		{
+			"name_interface": "/que/getStatus",
+			"header_interface": "",
+			"status": 1,
+			"request_response": [
+				{
+					"value_request": {"name":"test1"},
+					"value_response": {"code":1000, "data": "pretest2", "message":"接口返回成功"},
+					"header_interface": "",
+					"status": 1
+				},
+				{
+					"value_request": {"name":"test1-1"},
+					"value_response": {"code":1000, "data": "pretest3", "message":"接口返回成功"},
+					"header_interface": "",
+					"status": 1
+				},
+				{
+					"value_request": {"name":"test1-2"},
+					"value_response": {"code":1000, "data": "pretest3", "message":"接口返回成功"},
+					"header_interface": "",
+					"status": 1
+				}
+			]
+		},
+		{
+			"name_interface": "/que/status",
+			"header_interface": "",
+			"request_response": [
+				{
+					"value_request": "name=1",
+					"value_response": {"name":"pretest2"},
+					"header_interface": "",
+					"status": 1
+				},
+				{
+					"value_request": "name=2",
+					"value_response": {"name":"pretest2-1"},
+					"header_interface": "",
+					"status": 1
+				},
+				{
+					"value_request": "name=3",
+					"value_response": {"name":"pretest2-2"},
+					"header_interface": "",
+					"status": 1
+				}
+			]
+		}
+	]
+}
