@@ -47,8 +47,12 @@ def get_response_by_request(requirt):
     # 从json文件中读取数据
     for filename in os.listdir("./config"):
         with open("./config//" + filename, 'r', encoding='utf-8') as fp:
-            data_config.append(json.load(fp))
-    result = get_data_from_json(data_config, str(requirt), str(param_request))
+            try:
+                data_config.append(json.load(fp))
+                result = get_data_from_json(data_config, str(requirt), str(param_request))
+            except json.decoder.JSONDecodeError:
+                result = {'code': 9999, 'message': filename+'文件格式错误'}
+                break
     log.info("[INFO]Response：%s" % result)
     if result:
         return jsonify(result)
