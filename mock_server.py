@@ -27,11 +27,13 @@ def get_data_from_json(*params):
     """
     for data_json in params[0]:
         for data in data_json['data']:
-            if params[1] in data['name_interface'] and data['status'] == 1:  # 接口地址匹配
+            if params[1] in data['name_interface'] and data['status'] == 1:  # 接口地址匹配且接口数据有效
                 for req in data['request_response']:
                     if req['status'] == 1 and \
                             (ast.literal_eval(params[2]) == req['value_request'] or str(params[2]) == str(req['value_request'])):  # 请求参数匹配
                         return req['value_response']
+            elif params[1] in data['name_interface'] and data['status'] == 2:  # 接口地址匹配且使用默认返回结果
+                return data['default_response']
 
 
 @app.route('/<path:requirt>', methods=['GET', 'POST'])

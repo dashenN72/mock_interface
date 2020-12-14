@@ -5,6 +5,7 @@
 			"name_interface": "/add/getStatus",
 			"header_interface": "application:json",
 			"status": 1,
+			"default_response": {"code":1000, "data": "2", "message":"这是一个默认返回结果"},
 			"request_response": [
 				{
 					"value_request": {"name":"1"},
@@ -30,6 +31,7 @@
 			"name_interface": "/que/getStatus",
 			"header_interface": "",
 			"status": 1,
+			"default_response": {"code":1000, "data": "2", "message":"这是一个默认返回结果"},
 			"request_response": [
 				{
 					"value_request": {"name":"test2"},
@@ -54,6 +56,8 @@
 		{
 			"name_interface": "/que/status",
 			"header_interface": "",
+			"status": 1,
+			"default_response": {"code":1000, "data": "2", "message":"这是一个默认返回结果"},
 			"request_response": [
 				{
 					"value_request": "name=1",
